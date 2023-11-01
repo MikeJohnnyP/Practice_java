@@ -1,0 +1,21 @@
+import javax.swing.JFrame;
+
+public class main extends JFrame {
+	JFrame window;
+	
+	main(){
+		window = new JFrame();
+	}
+
+ public static void main(String[] args) {
+	JFrame window = new JFrame();
+	 window.setSize(570,789);
+		window.setTitle("window");
+		window.setLocationRelativeTo(null);
+		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		window.setVisible(true);
+}
+
+	
+
+}

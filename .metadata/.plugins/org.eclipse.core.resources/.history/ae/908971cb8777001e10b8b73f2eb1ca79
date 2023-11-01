@@ -1,0 +1,12 @@
+
+
+public class Main {
+	public static void main(String[] args) {
+     System.out.println("heelo word");
+     System.out.println(sumOfVector(5, 6));
+
+	}
+	public static int sumOfVector(int a, int b) {
+		return a + b;
+	}
+}

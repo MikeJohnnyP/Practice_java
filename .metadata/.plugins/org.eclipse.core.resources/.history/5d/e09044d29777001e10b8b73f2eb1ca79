@@ -1,0 +1,59 @@
+package hanhTinh;
+
+ 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
+
+public class DanhSachTrungThuong {
+	private ArrayList<String>  dskh;
+	public DanhSachTrungThuong() {
+		init();
+	}
+	private void init() {
+		dskh = new ArrayList<String>();
+		dskh.add("Tran Thi Thu Huong");
+		dskh.add("Ho Hoang Hieu");
+		dskh.add("Dinh Thi Thanh Thao");
+		dskh.add("Tran Trac Sinh");
+		dskh.add("Ta Nhat Triet");
+		dskh.add("Dinh Van Hao");
+	}
+	
+	public String trungThuong() {
+		int size = dskh.size();
+		int randomNum = new Random().nextInt(size);
+		return dskh.get(randomNum);
+		
+	}
+	
+	public void reverse() {
+		Collections.reverse(dskh);
+	}
+	
+	public ArrayList<String> reverse1(){
+		ArrayList<String> result = new ArrayList<String>();
+		for (int i = dskh.size()-1; i >=0 ; i--) {
+			result.add(dskh.get(i));
+			
+		}
+		return result;
+	}
+	public String toString() {
+		String result ="";
+		for (String string : dskh) {
+			result += string + "\n";
+			
+		}
+		return result;
+	}
+	
+	public static void main(String[] args) {
+		DanhSachTrungThuong dt = new DanhSachTrungThuong();
+		System.out.println("Người may mắn trúng thưởng: "+dt.trungThuong());
+		//dt.reverse();
+		dt.reverse1();
+		System.out.println(dt.toString());
+	}
+
+}
